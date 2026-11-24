@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>นโยบายความเป็นส่วนตัว · History 2D</title>
+<style>
+  :root { color-scheme: light dark; --fg:#1a1a1a; --bg:#fbfaf7; --muted:#5b5b5b; --line:#e2ded6; --link:#8a5a2b; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#ece9e3; --bg:#16150f; --muted:#a8a49b; --line:#33302a; --link:#e0a66a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font-family:"Segoe UI", system-ui, -apple-system, "Noto Sans Thai", sans-serif;
+         line-height:1.75; }
+  main { max-width:44rem; margin:0 auto; padding:4rem 1rem 6rem; }
+  h1 { font-size:1.9rem; margin:0 0 .25rem; letter-spacing:-.01em; }
+  .sub { color:var(--muted); margin:0 0 2.5rem; }
+  h2 { font-size:1.1rem; margin:2.25rem 0 .6rem; }
+  ul { padding-left:1.25rem; }
+  li { margin:.35rem 0; }
+  code { font-size:.95em; word-break:break-all; }
+  a { color:var(--link); }
+  footer { margin-top:3.5rem; padding-top:1.25rem; border-top:1px solid var(--line);
+           color:var(--muted); font-size:.95rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>นโยบายความเป็นส่วนตัว</h1>
+  <p class="sub">แอป History 2D · ปรับปรุงล่าสุด 24 พฤศจิกายน 2026</p>
+
+  <p>
+    History 2D เป็นเครื่องมือส่วนตัวของเจ้าของช่อง History 2D ใช้ประกอบคลิปวิดีโอ
+    และอัปโหลดขึ้นช่อง YouTube ของเจ้าของเอง ไม่ได้เปิดให้บุคคลทั่วไปใช้งาน
+  </p>
+
+  <h2>ข้อมูลที่แอปเข้าถึง</h2>
+  <p>เมื่อผู้ใช้ให้สิทธิ์ผ่านหน้าจอยินยอมของ Google แอปจะได้รับสิทธิ์เดียวคือ</p>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/youtube.upload</code> — สำหรับอัปโหลดไฟล์วิดีโอขึ้นช่องของผู้ใช้</li>
+  </ul>
+  <p>
+    แอปไม่ได้ขอและไม่ได้เข้าถึงอีเมล รายชื่อผู้ติดต่อ ไฟล์ใน Google Drive
+    ข้อมูลผู้ชม สถิติของช่อง หรือข้อมูลส่วนบุคคลอื่นใดของผู้ใช้
+  </p>
+
+  <h2>ข้อมูลที่แอปเก็บ</h2>
+  <p>
+    แอปเก็บโทเคนสำหรับเข้าถึง YouTube API (refresh token) ไว้เป็นค่าลับของระบบ
+    เพื่อให้อัปโหลดคลิปได้โดยไม่ต้องขอสิทธิ์ใหม่ทุกครั้ง โทเคนนี้ถูกเก็บในที่เก็บค่าลับ
+    ที่เข้ารหัสของ GitHub Actions และในตัวแปรสภาพแวดล้อมบนเครื่องของเจ้าของเท่านั้น
+    ไม่ถูกเขียนลงในซอร์สโค้ดหรือในบันทึกการทำงาน
+  </p>
+  <p>
+    นอกเหนือจากโทเคนดังกล่าว แอปไม่เก็บข้อมูลผู้ใช้อื่นใด ไม่มีฐานข้อมูลผู้ใช้
+    ไม่มีการเก็บประวัติการใช้งาน และไม่มีคุกกี้หรือระบบติดตามบนหน้าเว็บนี้
+  </p>
+
+  <h2>การเปิดเผยข้อมูล</h2>
+  <p>
+    แอปไม่ขาย ไม่แลกเปลี่ยน และไม่ส่งต่อข้อมูลที่ได้จาก Google ให้บุคคลที่สาม
+    ข้อมูลถูกส่งไปยังปลายทางเดียวคือ YouTube Data API ของ Google เพื่ออัปโหลดคลิป
+  </p>
+  <p>
+    การใช้ข้อมูลที่ได้รับจาก Google API เป็นไปตาม
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>
+    รวมถึงข้อกำหนดเรื่องการใช้งานอย่างจำกัด (Limited Use)
+  </p>
+
+  <h2>การถอนสิทธิ์</h2>
+  <p>
+    ผู้ใช้ถอนสิทธิ์ที่ให้ไว้ได้ตลอดเวลาที่หน้า
+    <a href="https://myaccount.google.com/permissions">บัญชี Google · แอปของบุคคลที่สาม</a>
+    เมื่อถอนสิทธิ์แล้ว โทเคนที่เก็บไว้จะใช้ไม่ได้ทันทีและแอปจะอัปโหลดคลิปไม่ได้อีก
+  </p>
+
+  <h2>การติดต่อ</h2>
+  <p>
+    สอบถามเรื่องนโยบายนี้ได้ที่อีเมลสนับสนุนที่ระบุไว้บนหน้าจอขอสิทธิ์ของแอป
+    ในหน้าจอยินยอมของ Google
+  </p>
+
+  <footer>
+    <a href="./">กลับหน้าแรก</a>
+  </footer>
+</main>
+</body>
+</html>
